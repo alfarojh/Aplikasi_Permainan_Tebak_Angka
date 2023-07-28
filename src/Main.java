@@ -18,15 +18,15 @@ public class Main {
         while (true) {
             System.out.print("Tebak angka (1-100): ");
             if (!scanner.hasNextInt()) {
-                System.out.println("Maaf, input tidak sesuai");
+                System.out.println("Maaf, input tidak sesuai"); // Jika input bukan angka, cetak pesan kesalahan
                 scanner.next();
-                continue; // Jika input bukan angka, lewati iterasi ini dan minta input lagi
+                continue; // Lewati iterasi ini dan minta input lagi
             }
 
             angka = scanner.nextInt();
-            if(angka < 1 && angka > 100) {
-                System.out.println("Masukkan angka dari 1 sampai 100");
-                continue;
+            if(angka < 1 || angka > 100) {
+                System.out.println("Masukkan angka dari 1 sampai 100"); // Validasi input agar angka berada dalam rentang yang valid
+                continue; // Lewati iterasi ini dan minta input lagi
             }
 
             coba++;
