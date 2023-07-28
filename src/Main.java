@@ -18,9 +18,9 @@ public class Main {
         while (true) {
             System.out.print("Tebak angka (1-100): ");
             if (!scanner.hasNextInt()) {
-                System.out.println("Maaf, input tidak sesuai"); // Jika input bukan angka, cetak pesan kesalahan
+                System.out.println("Maaf, input tidak sesuai");
                 scanner.next();
-                continue; // Lewati iterasi ini dan minta input lagi
+                continue; // Jika input bukan angka, lewati iterasi ini dan minta input lagi
             }
 
             angka = scanner.nextInt();
@@ -48,5 +48,6 @@ public class Main {
             }
         }
         System.out.println("Terima kasih telah bermain. Sampai jumpa!"); // Pesan akhir permainan
+        scanner.close();
     }
 }
